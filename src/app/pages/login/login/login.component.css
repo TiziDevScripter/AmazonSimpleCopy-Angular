@@ -1,0 +1,68 @@
+.wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 3em;
+}
+.wrapper .form{
+    width: 100%;
+    max-width: 250px;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    outline: 1px solid #ddd;
+}
+.wrapper .form .form__title{
+    margin: 0;
+}
+.wrapper .form .boxes{
+    position: relative;
+    width: 100%;
+}
+.wrapper .form .boxes .boxes__field{
+    outline: none;
+    border-bottom: 2px solid var(--color3);
+}
+.wrapper .form .boxes .boxes__field,
+.wrapper .form .submit__btn{
+    width: 100%;
+    height: 35px;
+    border: none;
+}
+.wrapper .form .boxes .boxes__label{
+    position: absolute;
+    top: 50%;
+    left: .3em;
+    font-size: .9em;
+    transform: translateY(-50%);
+    background-color: inherit;
+    cursor: text;
+    transition: top .2s ease-in-out, left .2s ease-in-out, transform .2s ease-in-out;
+    background-color: #fff;
+    padding: .1em .3em;
+    transform-origin: bottom left;
+}
+.wrapper .form .boxes .boxes__field:focus + .boxes__label,
+.wrapper .form .boxes .boxes__field:not(:placeholder-shown) + .boxes__label{
+    top: 0;
+    left: 0;
+    transform: translateY(-50%) scale(.7);
+    transform-origin: top left;
+}
+.wrapper .form .boxes .boxes__line{
+    background-color: var(--color3);
+    width: 100%;
+    height: 2px;
+    display: block;
+}
+.wrapper .form .submit__btn{
+    background-color: var(--color3);
+    color: #fff;
+    font-weight: 600;
+    transition: background-color .2s ease-in-out;
+}
+.wrapper .form .submit__btn:hover{
+    background-color: var(--color5);
+}

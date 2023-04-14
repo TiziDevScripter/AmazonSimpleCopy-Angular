@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root{
+    --color1: #FFFFFF;
+    --color2: #609EA2;
+    --color3: #F7CA00;
+    --color4: #181D31;
+    --color5: #D7AA00;
+}
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+body{
+    margin: 0;
+    overflow-x: hidden;
+}

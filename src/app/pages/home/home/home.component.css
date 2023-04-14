@@ -1,0 +1,42 @@
+.wrapper{
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 45px);
+    overflow: hidden;
+}
+.wrapper .box{
+    position: relative;
+    margin-top: 7em;
+    margin-left: 3em;
+    z-index: 50;
+}
+.wrapper .box .title{}
+.wrapper .box .title span{
+    font-family: 'Kalam', cursive;
+}
+.wrapper .box .text1{
+    max-width: 500px;
+}
+.wrapper .box .text2{}
+.wrapper .box .text2 a{
+    color: var(--color3);
+}
+
+.wrapper .box .title,
+.wrapper .box .text1,
+.wrapper .box .text2{
+    color: var(--color4);
+}
+
+.backimg1,
+.backimg2{
+    position: absolute;
+    width: 300px;
+    top: 332px;
+}
+.backimg1{
+    left: 650px;
+}
+.backimg2{
+    left: 450px;
+}
