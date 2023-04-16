@@ -66,3 +66,8 @@
 .wrapper .form .submit__btn:hover{
     background-color: var(--color5);
 }
+.wrapper .form .field-error{
+    color: #a00;
+    font-size: .9em;
+    align-self: self-start;
+}

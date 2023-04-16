@@ -1,28 +1,58 @@
 <div class="wrapper">
 
-    <form class="form">
+    <form class="form" [formGroup]="form">
 
         <h2 class="form__title">Log in</h2>
 
         <div class="boxes">
 
-            <input class="boxes__field" type="email" id="email" placeholder=" " autocomplete="off">
+            <input class="boxes__field" type="email" formControlName="email" id="email" placeholder=" " autocomplete="off">
 
             <label class="boxes__label" for="email">Email</label>
 
             <span class="boxes__line"></span>
+
+        </div>
+
+        <div *ngIf="form.get('email')?.errors && form.get('email')?.touched" class="field-error" style="color: #a00;">
+
+            <p *ngIf="form.get('email')?.hasError('required')">
+
+                <small>El campo es requerido.</small>
+
+            </p>
+
+            <p *ngIf="form.get('email')?.hasError('email')">
+
+                <small>El campo debe ser un correo electrónico.</small>
+
+            </p>
+
         </div>
 
         <div class="boxes">
 
-            <input class="boxes__field" type="password" id="password" placeholder=" " autocomplete="off">
+            <input class="boxes__field" type="password" formControlName="password" id="password" placeholder=" " autocomplete="off">
 
             <label class="boxes__label" for="password">Password</label>
 
             <span class="boxes__line"></span>
+
         </div>
 
-        <button class="submit__btn" type="submit">Log in</button>
+        <div *ngIf="form.get('password')?.errors && form.get('password')?.touched" class="field-error" style="color: #a00;">
+            <p *ngIf="form.get('password')?.hasError('required')">
+                <small>El campo es requerido.</small>
+            </p>
+
+            <p *ngIf="form.get('password')?.hasError('minlength')">
+                <small>El campo acepta un mínimo de {{ form.get('password')?.value?.length }}/7 letras.</small>
+            </p>
+        </div>
+
+        
+
+        <button class="submit__btn" type="submit" (click)="send()">Log in</button>
 
     </form>
 
